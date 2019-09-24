@@ -49,12 +49,6 @@ function decode(expr) {
         else 
             result += MORSE_TABLE[subStr];
     }
-    if(expr.length % 10 > 0)
-        result += MORSE_TABLE[expr.substring(expr.length - 1 - expr.length % 10, expr.length - 1)
-                                  .replace(/00/g, "")
-                                  .replace(/10/g, ".")
-                                  .replace(/11/g, "-")
-                                ];
     return result;
 }
 
